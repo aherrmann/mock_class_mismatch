@@ -7,6 +7,8 @@ jest_test(
         "$(rootpath jest.config.js)",
         "--runTestsByPath",
         "$(rootpath index.test.js)",
+        #"--node_options=--trace-event-categories=node",
+        #"--node_options=--trace-event-file-pattern=/tmp/node-trace-$${pid}-$${rotation}.log",
     ],
     data = [
         "index.test.js",
