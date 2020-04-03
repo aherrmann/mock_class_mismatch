@@ -1,0 +1,18 @@
+load("@npm//jest-cli:index.bzl", "jest_test")
+
+jest_test(
+    name = "repro",
+    args = [
+        "--config",
+        "$(rootpath jest.config.js)",
+        "--runTestsByPath",
+        "$(rootpath index.test.js)",
+    ],
+    data = [
+        "index.test.js",
+        "jest.config.js",
+        "@npm//jest",
+        "@npm//jest-websocket-mock",
+        "@npm//mock-socket",
+    ],
+)
