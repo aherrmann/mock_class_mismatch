@@ -1,4 +1,25 @@
 load("@npm//jest-cli:index.bzl", "jest_test")
+load(":debug.bzl", "debug", "js_files")
+
+debug(
+    name = "debug",
+    deps = [
+        #"@npm//jest-websocket-mock",
+        #"@npm//mock-socket",
+        ":jest-websocket-mock",
+        ":mock-socket",
+    ],
+)
+
+js_files(
+    name = "jest-websocket-mock",
+    dep = "@npm//jest-websocket-mock",
+)
+
+js_files(
+    name = "mock-socket",
+    dep = "@npm//mock-socket",
+)
 
 jest_test(
     name = "repro",
@@ -7,14 +28,14 @@ jest_test(
         "$(rootpath jest.config.js)",
         "--runTestsByPath",
         "$(rootpath index.test.js)",
-        #"--node_options=--trace-event-categories=node",
-        #"--node_options=--trace-event-file-pattern=/tmp/node-trace-$${pid}-$${rotation}.log",
+        "--node_options=--trace-event-categories=node",
+        "--node_options=--trace-event-file-pattern=/tmp/node-trace-$${pid}-$${rotation}.log",
     ],
     data = [
         "index.test.js",
         "jest.config.js",
         "@npm//jest",
-        "@npm//jest-websocket-mock",
-        "@npm//mock-socket",
+        ":jest-websocket-mock",
+        ":mock-socket",
     ],
 )
