@@ -1,4 +1,8 @@
 {
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "jest": "^24.9.0",
     "jest-websocket-mock": "^2.0.2",
