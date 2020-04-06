@@ -34,6 +34,7 @@ jest_test(
     data = [
         "index.test.js",
         "jest.config.js",
+        "SingleContextNodeEnvironment.js",
         "@npm//jest",
         ":jest-websocket-mock",
         ":mock-socket",
