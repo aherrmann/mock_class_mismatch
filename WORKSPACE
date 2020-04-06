@@ -8,7 +8,16 @@ http_archive(
     urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/1.1.0/rules_nodejs-1.1.0.tar.gz"],
 )
 
-load("@build_bazel_rules_nodejs//:index.bzl", "yarn_install")
+load("@build_bazel_rules_nodejs//:index.bzl", "node_repositories", "yarn_install")
+
+node_repositories(
+    package_json = ["//:package.json"],
+    node_version = "13.7.0",
+    node_repositories = {
+      "13.7.0-linux_amd64": ("node-v13.7.0-linux-x64.tar.xz", "node-v13.7.0-linux-x64", "02578025b82de24f4cfb3ffeb3824990431d739d09220f2db9ef9f454f475470"),
+    },
+    node_urls = ["https://nodejs.org/dist/v{version}/{filename}"],
+)
 
 yarn_install(
     name = "npm",
