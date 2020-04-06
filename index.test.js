@@ -1,8 +1,16 @@
-// Loaded from common-js format
-// node_modules/jest-websocket-mock/lib/jest-websocket-mock.cjs.js
+// Under Bazel:
+//   Loaded from common-js format
+//   node_modules/jest-websocket-mock/lib/jest-websocket-mock.cjs.js
+// Under yarn:
+//   Loaded from common-js format
+//   node_modules/jest-websocket-mock/lib/jest-websocket-mock.cjs.js
 const WS = require("jest-websocket-mock").default;
-// Loaded from js format
-// node_modules/mock-socket/dist/mock-socket.js"
+// Under Bazel:
+//   Loaded from js format
+//   node_modules/mock-socket/dist/mock-socket.js"
+// Under yarn:
+//   Loaded from common-js format
+//   node_modules/mock-socket/dist/mock-socket.cjs.js"
 const Server = require("mock-socket").Server;
 
 test("jest-websocket-mock", () => {
