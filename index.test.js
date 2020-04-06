@@ -1,6 +1,9 @@
 // Under Bazel:
 //   Loaded from common-js format
 //   node_modules/jest-websocket-mock/lib/jest-websocket-mock.cjs.js
+// Under Bazel with non-cjs dropped:
+//   Loaded from common-js format
+//   node_modules/jest-websocket-mock/lib/jest-websocket-mock.cjs.js
 // Under yarn:
 //   Loaded from common-js format
 //   node_modules/jest-websocket-mock/lib/jest-websocket-mock.cjs.js
@@ -8,6 +11,9 @@ const WS = require("jest-websocket-mock").default;
 // Under Bazel:
 //   Loaded from js format
 //   node_modules/mock-socket/dist/mock-socket.js"
+// Under Bazel with non-cjs droped:
+//   Loaded from common-js format
+//   node_modules/mock-socket/dist/mock-socket.cjs.js"
 // Under yarn:
 //   Loaded from common-js format
 //   node_modules/mock-socket/dist/mock-socket.cjs.js"
