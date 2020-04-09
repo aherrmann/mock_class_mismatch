@@ -4,6 +4,10 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@jest/transform": "^25.3.0",
+    "babel-jest": "^25.3.0",
     "jest": "^24.9.0",
     "jest-websocket-mock": "^2.0.2",
     "mock-socket": "^9.0.3"

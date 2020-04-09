@@ -11,8 +11,13 @@ jest_test(
         #"--node_options=--trace-event-file-pattern=/tmp/node-trace-$${pid}-$${rotation}.log",
     ],
     data = [
+        "babel.config.js",
         "index.test.js",
         "jest.config.js",
+        "@npm//@babel/core",
+        "@npm//@babel/preset-env",
+        "@npm//@jest/transform",
+        "@npm//babel-jest",
         "@npm//jest",
         "@npm//jest-websocket-mock",
         "@npm//mock-socket",
